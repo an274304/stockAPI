@@ -1,0 +1,15 @@
+I:\Work\StockApproval\API\ApplicationLayer\bin\Release\net8.0\ApplicationLayer.deps.json
+I:\Work\StockApproval\API\ApplicationLayer\bin\Release\net8.0\ApplicationLayer.dll
+I:\Work\StockApproval\API\ApplicationLayer\bin\Release\net8.0\ApplicationLayer.pdb
+I:\Work\StockApproval\API\ApplicationLayer\bin\Release\net8.0\DomainLayer.dll
+I:\Work\StockApproval\API\ApplicationLayer\bin\Release\net8.0\DomainLayer.pdb
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.csproj.AssemblyReference.cache
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.GeneratedMSBuildEditorConfig.editorconfig
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.AssemblyInfoInputs.cache
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.AssemblyInfo.cs
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.csproj.CoreCompileInputs.cache
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\Applicat.033E422A.Up2Date
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.dll
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\refint\ApplicationLayer.dll
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.pdb
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ref\ApplicationLayer.dll

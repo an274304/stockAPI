@@ -1,0 +1,6 @@
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+clear
+
+dotnet ef dbcontext scaffold "Server=localhost;Database=StockApproval;Trusted_Connection=True;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Data/Models --context ApplicationDbContext --context-dir Data --force 

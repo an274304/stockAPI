@@ -1,0 +1,57 @@
+{
+  "Files": [
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\BillFilePath\\Untitled.png",
+      "PackagePath": "staticwebassets\\BillFilePath\\Untitled.png"
+    },
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\BranchImg\\Untitled.png",
+      "PackagePath": "staticwebassets\\BranchImg\\Untitled.png"
+    },
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\CategoryImg\\Untitled.png",
+      "PackagePath": "staticwebassets\\CategoryImg\\Untitled.png"
+    },
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\CategoryImg\\businessman.png",
+      "PackagePath": "staticwebassets\\CategoryImg\\businessman.png"
+    },
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\CurrencyImg\\Untitled.png",
+      "PackagePath": "staticwebassets\\CurrencyImg\\Untitled.png"
+    },
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\DepartmentImg\\Untitled.png",
+      "PackagePath": "staticwebassets\\DepartmentImg\\Untitled.png"
+    },
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\ProductImg\\Untitled.png",
+      "PackagePath": "staticwebassets\\ProductImg\\Untitled.png"
+    },
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\VendorImg\\Untitled.png",
+      "PackagePath": "staticwebassets\\VendorImg\\Untitled.png"
+    },
+    {
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.StockApproval.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.StockApproval.props",
+      "PackagePath": "build\\StockApproval.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.StockApproval.props",
+      "PackagePath": "buildMultiTargeting\\StockApproval.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.StockApproval.props",
+      "PackagePath": "buildTransitive\\StockApproval.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
