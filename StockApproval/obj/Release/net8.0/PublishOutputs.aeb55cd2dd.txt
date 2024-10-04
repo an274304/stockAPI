@@ -7,7 +7,9 @@ I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\StockAppro
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\StockApproval.pdb
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
+I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\BouncyCastle.Cryptography.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Humanizer.dll
+I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\MailKit.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.Versioning.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
@@ -52,6 +54,7 @@ I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Microsoft.
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\MimeKit.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Mono.TextTemplating.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
 I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\PubTmp\Out\NuGet.Common.dll

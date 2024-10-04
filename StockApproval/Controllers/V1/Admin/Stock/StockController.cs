@@ -180,5 +180,46 @@ namespace StockApproval.Controllers.V1.Admin.Stock
                 return StatusCode(StatusCodes.Status500InternalServerError, response);
             }
         }
+
+        [HttpGet("GetAvailableStockAtAdmin")]
+        public IActionResult GetAvailableStockAtAdmin()
+        {
+            try
+            {
+                List<showAvailableStockTable> result = _StockService.GetAvailableStockAtAdmin();
+
+                if (result != null)
+                {
+                    var response = new ApiResult<showAvailableStockTable>
+                    {
+                        message = "List Of Stocks",
+                        result = true,
+                        dataList = result
+                    };
+
+                    return Ok(response);
+                }
+                else
+                {
+                    var response = new ApiResult<object>
+                    {
+                        message = "Failed To Fetch",
+                        result = false
+                    };
+
+                    return Ok(response);
+                }
+            }
+            catch (Exception ex)
+            {
+                var response = new ApiResult<object>
+                {
+                    message = ex.Message.ToString(),
+                    result = false,
+                    data = null
+                };
+                return StatusCode(StatusCodes.Status500InternalServerError, response);
+            }
+        }
     }
 }

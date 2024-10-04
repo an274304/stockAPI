@@ -19,6 +19,11 @@ namespace ApplicationLayer.Implementations.Admin.Stock
 
         }
 
+        public List<showAvailableStockTable> GetAvailableStockAtAdmin()
+        {
+            return _StockRepo.GetAvailableStockAtAdmin();
+        }
+
         public List<PurchaseOrder> GetNewStockAtAdmin()
         {
             return _StockRepo.GetNewStockAtAdmin();

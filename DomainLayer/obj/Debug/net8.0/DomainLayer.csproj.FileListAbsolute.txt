@@ -20,3 +20,4 @@ I:\Work\StockApproval\API\DomainLayer\obj\Debug\net8.0\DomainLayer.dll
 I:\Work\StockApproval\API\DomainLayer\obj\Debug\net8.0\refint\DomainLayer.dll
 I:\Work\StockApproval\API\DomainLayer\obj\Debug\net8.0\DomainLayer.pdb
 I:\Work\StockApproval\API\DomainLayer\obj\Debug\net8.0\ref\DomainLayer.dll
+I:\Work\StockApproval\API\DomainLayer\obj\Debug\net8.0\DomainLayer.sourcelink.json

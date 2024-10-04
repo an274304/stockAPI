@@ -68,7 +68,8 @@ namespace InfrastructureLayer.Repos.V1.Admin.User
                                 Created = sdr.IsDBNull(sdr.GetOrdinal("Created")) ? null : sdr.GetDateTime(sdr.GetOrdinal("Created")),
                                 CreatedBy = sdr.IsDBNull(sdr.GetOrdinal("CreatedBy")) ? null : sdr.GetString(sdr.GetOrdinal("CreatedBy")),
                                 Updated = sdr.IsDBNull(sdr.GetOrdinal("Updated")) ? null : sdr.GetDateTime(sdr.GetOrdinal("Updated")),
-                                UpdatedBy = sdr.IsDBNull(sdr.GetOrdinal("UpdatedBy")) ? null : sdr.GetString(sdr.GetOrdinal("UpdatedBy"))
+                                UpdatedBy = sdr.IsDBNull(sdr.GetOrdinal("UpdatedBy")) ? null : sdr.GetString(sdr.GetOrdinal("UpdatedBy")),
+                                UsPassword = sdr.IsDBNull(sdr.GetOrdinal("UsPassword")) ? null : sdr.GetString(sdr.GetOrdinal("UsPassword"))
                             });
                         }
                     }
@@ -110,7 +111,8 @@ namespace InfrastructureLayer.Repos.V1.Admin.User
                                 Created = sdr.IsDBNull(sdr.GetOrdinal("Created")) ? null : sdr.GetDateTime(sdr.GetOrdinal("Created")),
                                 CreatedBy = sdr.IsDBNull(sdr.GetOrdinal("CreatedBy")) ? null : sdr.GetString(sdr.GetOrdinal("CreatedBy")),
                                 Updated = sdr.IsDBNull(sdr.GetOrdinal("Updated")) ? null : sdr.GetDateTime(sdr.GetOrdinal("Updated")),
-                                UpdatedBy = sdr.IsDBNull(sdr.GetOrdinal("UpdatedBy")) ? null : sdr.GetString(sdr.GetOrdinal("UpdatedBy"))
+                                UpdatedBy = sdr.IsDBNull(sdr.GetOrdinal("UpdatedBy")) ? null : sdr.GetString(sdr.GetOrdinal("UpdatedBy")),
+                                UsPassword = sdr.IsDBNull(sdr.GetOrdinal("UsPassword")) ? null : sdr.GetString(sdr.GetOrdinal("UsPassword"))
                             };
                         }
                     }
@@ -143,6 +145,7 @@ namespace InfrastructureLayer.Repos.V1.Admin.User
                     cmd.Parameters.AddWithValue("@UsGstin", (object)user.UsGstin ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@Created", (object)user.Created ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@CreatedBy", (object)user.CreatedBy ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@UsPassword", (object)user.UsPassword ?? DBNull.Value);
 
                     conn.Open();
 
@@ -177,6 +180,7 @@ namespace InfrastructureLayer.Repos.V1.Admin.User
                     cmd.Parameters.AddWithValue("@UsGstin", (object)User.UsGstin ?? DBNull.Value);
                     cmd.Parameters.AddWithValue("@Updated", DateTime.Now);
                     cmd.Parameters.AddWithValue("@UpdatedBy", (object)User.UpdatedBy ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@UsPassword", (object)User.UsPassword ?? DBNull.Value);
 
                     conn.Open();
 

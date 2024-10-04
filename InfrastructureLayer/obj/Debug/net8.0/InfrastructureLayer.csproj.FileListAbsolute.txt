@@ -36,3 +36,4 @@ I:\Work\StockApproval\API\InfrastructureLayer\obj\Debug\net8.0\refint\Infrastruc
 I:\Work\StockApproval\API\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.pdb
 I:\Work\StockApproval\API\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.genruntimeconfig.cache
 I:\Work\StockApproval\API\InfrastructureLayer\obj\Debug\net8.0\ref\InfrastructureLayer.dll
+I:\Work\StockApproval\API\InfrastructureLayer\obj\Debug\net8.0\InfrastructureLayer.sourcelink.json

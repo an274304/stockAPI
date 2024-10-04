@@ -259,3 +259,7 @@ I:\Work\StockApproval\API\StockApproval\bin\Release\net8.0\runtimes\win\lib\net7
 I:\Work\StockApproval\API\StockApproval\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 I:\Work\StockApproval\API\StockApproval\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 I:\Work\StockApproval\API\StockApproval\bin\Release\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+I:\Work\StockApproval\API\StockApproval\obj\Release\net8.0\StockApproval.sourcelink.json
+I:\Work\StockApproval\API\StockApproval\bin\Release\net8.0\BouncyCastle.Cryptography.dll
+I:\Work\StockApproval\API\StockApproval\bin\Release\net8.0\MailKit.dll
+I:\Work\StockApproval\API\StockApproval\bin\Release\net8.0\MimeKit.dll

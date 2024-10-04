@@ -14,5 +14,6 @@ namespace ApplicationLayer.IServices.Admin.Stock
         PurchaseOrderWitItems GetNewStockItemsAtAdmin(string purchaseOrderNo);
         List<PurchaseOrder> GetNewStockAtAdmin();
         List<StockItemMaster> loadUpdatedStockMasterItems(string purchaseOrderNo);
+        List<showAvailableStockTable> GetAvailableStockAtAdmin();
     }
 }

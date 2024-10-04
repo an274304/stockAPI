@@ -337,3 +337,7 @@ I:\Work\StockApproval\API\StockApproval\obj\Debug\net8.0\refint\StockApproval.dl
 I:\Work\StockApproval\API\StockApproval\obj\Debug\net8.0\StockApproval.pdb
 I:\Work\StockApproval\API\StockApproval\obj\Debug\net8.0\StockApproval.genruntimeconfig.cache
 I:\Work\StockApproval\API\StockApproval\obj\Debug\net8.0\ref\StockApproval.dll
+I:\Work\StockApproval\API\StockApproval\obj\Debug\net8.0\StockApproval.sourcelink.json
+I:\Work\StockApproval\API\StockApproval\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+I:\Work\StockApproval\API\StockApproval\bin\Debug\net8.0\MailKit.dll
+I:\Work\StockApproval\API\StockApproval\bin\Debug\net8.0\MimeKit.dll

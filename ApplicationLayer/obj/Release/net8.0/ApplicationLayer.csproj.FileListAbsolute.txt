@@ -13,3 +13,4 @@ I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.d
 I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\refint\ApplicationLayer.dll
 I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.pdb
 I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ref\ApplicationLayer.dll
+I:\Work\StockApproval\API\ApplicationLayer\obj\Release\net8.0\ApplicationLayer.sourcelink.json

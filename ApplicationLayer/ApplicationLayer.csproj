@@ -14,4 +14,9 @@
   <ItemGroup>
     <ProjectReference Include="..\DomainLayer\DomainLayer.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IServices\Account\Email\" />
+    <Folder Include="IServices\Director\Email\" />
+  </ItemGroup>
 </Project>

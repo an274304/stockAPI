@@ -20,6 +20,36 @@ namespace InfrastructureLayer.Repos.V1.Admin.Stock
             _connectionString = context.Database.GetConnectionString();
         }
 
+        public List<showAvailableStockTable> GetAvailableStockAtAdmin()
+        {
+            List<showAvailableStockTable> stocks = new List<showAvailableStockTable>();
+            using (var conn = new SqlConnection(_connectionString))
+            {
+                using (var cmd = new SqlCommand("showAvailableStockTable", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+
+                    using (var sdr = cmd.ExecuteReader())
+                    {
+                        while (sdr.Read())
+                        {
+                            stocks.Add(new showAvailableStockTable()
+                            {
+                                CategoryName = sdr.IsDBNull(sdr.GetOrdinal("CategoryName")) ? null : sdr.GetString(sdr.GetOrdinal("CategoryName")),
+                                ProductName = sdr.IsDBNull(sdr.GetOrdinal("ProductName")) ? null : sdr.GetString(sdr.GetOrdinal("ProductName")),
+                                Total = sdr.IsDBNull(sdr.GetOrdinal("Total")) ? default : sdr.GetInt32(sdr.GetOrdinal("Total")),
+                                TotalAvailable = sdr.IsDBNull(sdr.GetOrdinal("TotalAvailable")) ? default : sdr.GetInt32(sdr.GetOrdinal("TotalAvailable")),
+                                TotalAssigned = sdr.IsDBNull(sdr.GetOrdinal("TotalAssigned")) ? default : sdr.GetInt32(sdr.GetOrdinal("TotalAssigned")),
+                                TotalDispose = sdr.IsDBNull(sdr.GetOrdinal("TotalDispose")) ? default : sdr.GetInt32(sdr.GetOrdinal("TotalDispose"))
+                            });
+                        }
+                    }
+                }
+            }
+            return stocks;
+        }
+
         public List<PurchaseOrder> GetNewStockAtAdmin()
         {
             List<PurchaseOrder> orders = new List<PurchaseOrder>();
@@ -175,7 +205,7 @@ namespace InfrastructureLayer.Repos.V1.Admin.Stock
         {
             using (var conn = new SqlConnection(_connectionString))
             {
-                using (var cmd = new SqlCommand("[dbo].[InsertStockItemsFromDTOs]", conn))
+                using (var cmd = new SqlCommand("InsertStockItemsFromDTOs", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -196,7 +226,7 @@ namespace InfrastructureLayer.Repos.V1.Admin.Stock
                         ParameterName = "@Items",
                         SqlDbType = SqlDbType.Structured,
                         Value = table,
-                        TypeName = "dbo.UpdateNewStockItemType"
+                        TypeName = "UpdateNewStockItemType"
                     };
                     cmd.Parameters.Add(param);
 

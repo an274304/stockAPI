@@ -1,6 +1,7 @@
 ﻿using ApplicationLayer.IRepositories.Admin.Purchase;
 using DomainLayer.V1.DTOs;
 using DomainLayer.V1.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -283,15 +284,15 @@ namespace InfrastructureLayer.Repos.V1.Admin.Purchase
             }
         }
 
-        public int UploadPayedReceiptForBill(PurchaseOrder order)
+        public int UploadPayedReceiptForBill(string purchaseOrderNo, string billReceiptFileUrl)
         {
             using (var conn = new SqlConnection(_connectionString))
             {
                 using (var cmd = new SqlCommand("UploadPayedReceiptForBill", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@purchaseOrderNo", order.PurchaseOrderNo);
-                    cmd.Parameters.AddWithValue("@AcctsBillPayReceipt", order.AcctsBillPayReceipt);
+                    cmd.Parameters.AddWithValue("@purchaseOrderNo", purchaseOrderNo);
+                    cmd.Parameters.AddWithValue("@AcctsBillPayReceipt", billReceiptFileUrl);
 
                     conn.Open();
 

@@ -87,9 +87,27 @@ namespace ApplicationLayer.Implementations.Admin.Purchase
             return _purchaseRepo.RemoveItemByDirector(purchaseItemId);
         }
 
-        public int UploadPayedReceiptForBill(PurchaseOrder order)
+        public int UploadPayedReceiptForBill(string purchaseOrderNo, IFormFile file)
         {
-            return _purchaseRepo.UploadPayedReceiptForBill(order);
+            string fileUrl = string.Empty;
+            if (!Directory.Exists(Path.Combine(fileStoragePath, BillReceiptFilePath)))
+            {
+                Directory.CreateDirectory(Path.Combine(fileStoragePath, BillReceiptFilePath));
+            }
+
+            if (file != null && file.Length > 0)
+            {
+                var filePath = Path.Combine(fileStoragePath, BillReceiptFilePath, file.FileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                fileUrl = Path.Combine(_urlService.GetBaseUrl(), BillReceiptFilePath, file.FileName);
+            }
+
+            return _purchaseRepo.UploadPayedReceiptForBill(purchaseOrderNo, fileUrl);
         }
     }
 }

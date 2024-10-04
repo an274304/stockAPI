@@ -1,4 +1,5 @@
 ﻿using ApplicationLayer.IServices.Admin.Auth;
+using ApplicationLayer.IServices.Admin.Email;
 using DomainLayer.AuthDTOs;
 using DomainLayer.V1.DTOs;
 using DomainLayer.V1.Models;
@@ -19,11 +20,13 @@ namespace StockApproval.Controllers.Auth
     {
         private readonly JwtOption _jwtOptions;
         private readonly IAuthService _authService;
+        private readonly IEmailServiceAdmin _emailServiceAdmin;
 
-        public AuthController(IOptions<JwtOption> jwtOptions, IAuthService authService)
+        public AuthController(IOptions<JwtOption> jwtOptions, IAuthService authService, IEmailServiceAdmin emailServiceAdmin)
         {
             _jwtOptions = jwtOptions.Value;
             _authService = authService;
+            _emailServiceAdmin = emailServiceAdmin;
         }
 
         [HttpPost("login")]
@@ -41,7 +44,8 @@ namespace StockApproval.Controllers.Auth
                     token = token,
                     userName = user.UsName,
                     userId = user.Id,
-                    userRole = user.UsTypeName
+                    userRole = user.UsTypeName,
+                    userImage = user.UsImg
                 });
             }
 
@@ -67,7 +71,7 @@ namespace StockApproval.Controllers.Auth
                 issuer: _jwtOptions.Issuer,
                 audience: _jwtOptions.Audience,
                 claims: claims,
-                expires: DateTime.UtcNow.AddHours(1), // Set token expiration
+                expires: DateTime.UtcNow.AddYears(1), // Set token expiration
                 signingCredentials: credentials
             );
 

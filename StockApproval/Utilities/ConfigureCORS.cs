@@ -8,7 +8,7 @@
             {
                 options.AddDefaultPolicy(builder =>
                     builder.WithOrigins("http://localhost:4200", "https://stock.committedcargo.net")
-                           .WithMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                           .AllowAnyMethod()
                            .AllowAnyHeader()
                            .AllowCredentials());
             });

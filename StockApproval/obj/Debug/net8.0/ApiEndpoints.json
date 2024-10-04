@@ -1397,14 +1397,44 @@
     "ContainingType": "StockApproval.Controllers.V1.Admin.Purchase.PurchaseController",
     "Method": "UploadPayedReceiptForBill",
     "RelativePath": "api/v1/Purchase/UploadPayedReceiptForBill",
-    "HttpMethod": "PUT",
+    "HttpMethod": "PATCH",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "order",
-        "Type": "DomainLayer.V1.Models.PurchaseOrder",
-        "IsRequired": true
+        "Name": "purchaseOrderNo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -1453,6 +1483,16 @@
     "ContainingType": "StockApproval.Controllers.V1.Admin.Purchase.PurchaseTableController",
     "Method": "GetWaitingOrderAtAdmin",
     "RelativePath": "api/v1/PurchaseTable/GetWaitingOrderAtAdmin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StockApproval.Controllers.V1.Admin.Stock.StockController",
+    "Method": "GetAvailableStockAtAdmin",
+    "RelativePath": "api/v1/Stock/GetAvailableStockAtAdmin",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -2135,6 +2175,26 @@
     "ContainingType": "StockApproval.Controllers.V1.Director.VendorBill.VendorBillTableController",
     "Method": "GetRejectedBillAtDirector",
     "RelativePath": "api/v1/VendorBillTable/GetRejectedBillAtDirector",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StockApproval.Controllers.V1.Account.VendorBill.VendorBillTableAccountController",
+    "Method": "GetPayedBillAtAccount",
+    "RelativePath": "api/v1/VendorBillTableAccount/GetPayedBillAtAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StockApproval.Controllers.V1.Account.VendorBill.VendorBillTableAccountController",
+    "Method": "GetPendingBillAtAccount",
+    "RelativePath": "api/v1/VendorBillTableAccount/GetPendingBillAtAccount",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

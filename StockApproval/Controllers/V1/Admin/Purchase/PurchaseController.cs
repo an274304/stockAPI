@@ -61,7 +61,6 @@ namespace StockApproval.Controllers.V1.Admin.Purchase
             }
         }
 
-
         [HttpPut("ItemsApproveByDirector")]
         public IActionResult ItemsApproveByDirector([FromQuery] string purchaseOrderNo)
         {
@@ -343,12 +342,12 @@ namespace StockApproval.Controllers.V1.Admin.Purchase
             }
         }
 
-        [HttpPut("UploadPayedReceiptForBill")]
-        public IActionResult UploadPayedReceiptForBill([FromBody] PurchaseOrder order)
+        [HttpPatch("UploadPayedReceiptForBill")]
+        public IActionResult UploadPayedReceiptForBill([FromForm] string purchaseOrderNo, [FromForm] IFormFile file)
         {
             try
             {
-                var result = _PurchaseService.UploadPayedReceiptForBill(order);
+                var result = _PurchaseService.UploadPayedReceiptForBill(purchaseOrderNo, file);
 
                 if (result > 0)
                 {

@@ -42,4 +42,24 @@ public partial class PurchaseOrder
     public DateTime? Updated { get; set; }
 
     public string? UpdatedBy { get; set; }
+
+    public DateTime? OrderCreatedDt { get; set; }
+
+    public string? OrderCreatedBy { get; set; }
+
+    public DateTime? OrderApproveDt { get; set; }
+
+    public string? OrderApproveBy { get; set; }
+
+    public DateTime? OrderRejectedDt { get; set; }
+
+    public string? OrderRejectBy { get; set; }
+
+    public DateTime? OrderReceivedDt { get; set; }
+
+    public string? OrderReceivedBy { get; set; }
+
+    public DateTime? OrderBillReceiptUploadDt { get; set; }
+
+    public string? OrderBillReceiptUploadBy { get; set; }
 }

@@ -14,6 +14,6 @@ namespace ApplicationLayer.IServices.Admin.Purchase
         int ReceivedItemsUpdate(PurchaseOrderWitItems updateOrder);
         PurchaseOrderWitItems GetReceivedItemsForUpdate(string purchaseOrderNo);
         int BillSendTOAcctsAndStock(string purchaseOrderNo, IFormFile file);
-        int UploadPayedReceiptForBill(PurchaseOrder order);
+        int UploadPayedReceiptForBill(string purchaseOrderNo, IFormFile file);
     }
 }

@@ -5,32 +5,8 @@
       "PackagePath": "staticwebassets\\BillFilePath\\Untitled.png"
     },
     {
-      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\BranchImg\\Untitled.png",
-      "PackagePath": "staticwebassets\\BranchImg\\Untitled.png"
-    },
-    {
-      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\CategoryImg\\Untitled.png",
-      "PackagePath": "staticwebassets\\CategoryImg\\Untitled.png"
-    },
-    {
-      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\CategoryImg\\businessman.png",
-      "PackagePath": "staticwebassets\\CategoryImg\\businessman.png"
-    },
-    {
-      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\CurrencyImg\\Untitled.png",
-      "PackagePath": "staticwebassets\\CurrencyImg\\Untitled.png"
-    },
-    {
-      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\DepartmentImg\\Untitled.png",
-      "PackagePath": "staticwebassets\\DepartmentImg\\Untitled.png"
-    },
-    {
-      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\ProductImg\\Untitled.png",
-      "PackagePath": "staticwebassets\\ProductImg\\Untitled.png"
-    },
-    {
-      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\VendorImg\\Untitled.png",
-      "PackagePath": "staticwebassets\\VendorImg\\Untitled.png"
+      "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\BillReceiptFilePath\\Untitled.png",
+      "PackagePath": "staticwebassets\\BillReceiptFilePath\\Untitled.png"
     },
     {
       "Id": "I:\\Work\\StockApproval\\API\\StockApproval\\wwwroot\\index.html",

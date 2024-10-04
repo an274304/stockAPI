@@ -1,5 +1,6 @@
 ﻿using DomainLayer.V1.DTOs;
 using DomainLayer.V1.Models;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,6 @@ namespace ApplicationLayer.IRepositories.Admin.Purchase
         //int BillSendTOAcctsAndStock(string purchaseOrderNo);
         int BillSendTOAcctsAndStock(string purchaseOrderNo, string billFileUrl);
 
-        int UploadPayedReceiptForBill(PurchaseOrder order);
+        int UploadPayedReceiptForBill(string purchaseOrderNo, string billReceiptFileUrl);
     }
 }

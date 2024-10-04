@@ -1,4 +1,5 @@
 using ApplicationLayer;
+using ApplicationLayer.Implementations.Account.VendorBill;
 using ApplicationLayer.Implementations.Admin.Auth;
 using ApplicationLayer.Implementations.Admin.Branch;
 using ApplicationLayer.Implementations.Admin.Category;
@@ -10,6 +11,7 @@ using ApplicationLayer.Implementations.Admin.Stock;
 using ApplicationLayer.Implementations.Admin.User;
 using ApplicationLayer.Implementations.Admin.Vendor;
 using ApplicationLayer.Implementations.Director.VendorBill;
+using ApplicationLayer.IRepositories.Account.VendorBill;
 using ApplicationLayer.IRepositories.Admin.Auth;
 using ApplicationLayer.IRepositories.Admin.Branch;
 using ApplicationLayer.IRepositories.Admin.Category;
@@ -21,11 +23,13 @@ using ApplicationLayer.IRepositories.Admin.Stock;
 using ApplicationLayer.IRepositories.Admin.User;
 using ApplicationLayer.IRepositories.Admin.Vendor;
 using ApplicationLayer.IRepositories.Director.VendorBill;
+using ApplicationLayer.IServices.Account.VendorBill;
 using ApplicationLayer.IServices.Admin.Auth;
 using ApplicationLayer.IServices.Admin.Branch;
 using ApplicationLayer.IServices.Admin.Category;
 using ApplicationLayer.IServices.Admin.Currency;
 using ApplicationLayer.IServices.Admin.Department;
+using ApplicationLayer.IServices.Admin.Email;
 using ApplicationLayer.IServices.Admin.Product;
 using ApplicationLayer.IServices.Admin.Purchase;
 using ApplicationLayer.IServices.Admin.Stock;
@@ -33,7 +37,10 @@ using ApplicationLayer.IServices.Admin.User;
 using ApplicationLayer.IServices.Admin.Vendor;
 using ApplicationLayer.IServices.Director.VendorBill;
 using DomainLayer.AuthDTOs;
+using DomainLayer.V1.DTOs;
 using InfrastructureLayer;
+using InfrastructureLayer.Email.admin;
+using InfrastructureLayer.Repos.V1.Account.VendorBill;
 using InfrastructureLayer.Repos.V1.Admin.Auth;
 using InfrastructureLayer.Repos.V1.Admin.Branch;
 using InfrastructureLayer.Repos.V1.Admin.Category;
@@ -52,6 +59,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using StockApproval.Utilities;
+using System.Configuration;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -59,6 +67,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Configure DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register EmailSettings with IOptions
+builder.Services.Configure<SmtpSetting>(builder.Configuration.GetSection("SmtpSetting"));
 
 // Register services
 RegisterServices(builder.Services);
@@ -150,6 +161,7 @@ void RegisterServices(IServiceCollection services)
 {
     services.AddHttpContextAccessor();
     services.AddSingleton<IUrlService, UrlService>();
+    services.AddSingleton<IEmailServiceAdmin, EmailServiceAdmin>();
 
     services.AddScoped<IAuthService, AuthService>();
     services.AddScoped<IAuthRepo, AuthRepo>();
@@ -189,4 +201,10 @@ void RegisterServices(IServiceCollection services)
 
     services.AddScoped<IVendorBillTableService, VendorBillTableService>();
     services.AddScoped<IVendorBillTableRepo, VendorBillTableRepo>();
+
+    services.AddScoped<IVendorBillAccountService, VendorBillAccountService>();
+    services.AddScoped<IVendorBillAccountRepo, VendorBillAccountRepo>();
+
+    services.AddScoped<IVendorBillTableAccountService, VendorBillTableAccountService>();
+    services.AddScoped<IVendorBillTableAccountRepo, VendorBillTableAccountRepo>();
 }
